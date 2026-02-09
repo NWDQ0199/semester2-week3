@@ -10,5 +10,4 @@ int main(void) //void can be omitted, but then main can be called with more than
 {
     printf("Hello\n");
     return 0;
-}	
-
+}
