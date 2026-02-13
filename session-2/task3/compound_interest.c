@@ -7,7 +7,8 @@
 
 #include <stdio.h>
 
-int main( void ) {
+int main( void )
+{
 
     float deposit = 120.0;  // initial deposit
     float rate = 0.05;      // interest rate
