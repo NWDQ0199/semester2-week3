@@ -1,0 +1,15 @@
+string InsertChar(string str, char chr, int index)
+{
+    if(index>str.Length-1) return "";
+    string str2="";
+    for(int i=0;i<index;i++)
+    {
+        str2+=str[i];
+    }
+    str2+=chr;
+    for(int i=index;i<str.Length;i++)
+    {
+        str2+=str[i];
+    }
+    return str2;
+}
