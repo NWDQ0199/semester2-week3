@@ -38,7 +38,7 @@ int InsertChar(char** str, int strLen, char chr, int index)
         str2[i]=strOrig[i-1];
     }
     str2[strLen+2]='\0';
-    //free(str);
+    //free(str); //since *str is not a char* on the heap (not malloc'd) it doesn't need freeing, if it was then it would
     *str=str2;
     return 0;
 }
