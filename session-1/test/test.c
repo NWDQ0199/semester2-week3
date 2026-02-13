@@ -19,6 +19,9 @@ int InsertChar(char** str, int strLen, char chr, int index)
 {
     if(index>strLen)
     {
+        //fails when index is outside the range of values 0 to strLen
+        //this is 0 to strLen and not 0 to strLen-1 because you can also place
+        //chr after the final character in str
         *str=malloc(0); //so str can be freed after insertchar fails
         return 1;
     }
