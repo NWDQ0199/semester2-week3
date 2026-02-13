@@ -26,11 +26,11 @@ int main( void )
     if(disc<0)
     {
         printf("No real roots");
-        return 0
+        return 0;
     }
-    sqrtDisc=sqrt(disc);
-    sqrtDisc2=sqrtDisc/(2f*a);
-    mBO2A=-b/(2f*a);
+    float sqrtDisc=sqrt(disc);
+    float sqrtDisc2=sqrtDisc/(2.f*a);
+    float mBO2A=-b/(2.f*a);
     root1=mBO2A-sqrtDisc2;
     root2=mBO2A+sqrtDisc2;
     printf("Root 1: %f\nRoot 2: %f\n",root1,root2);
