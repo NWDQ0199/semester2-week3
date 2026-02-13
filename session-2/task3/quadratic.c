@@ -9,7 +9,8 @@
 #include <stdio.h>
 #include <math.h>
 
-int main( void ) {
+int main( void )
+{
 
     float a = 1.0;
     float b = -5.0;
@@ -21,8 +22,17 @@ int main( void ) {
      * You can define additional variable for intermediate results to make the code simpler.
      * Print out the final results for the 2 roots as float values.
      */
-
-    
-
+    float disc=b*b-4*a*c;
+    if(disc<0)
+    {
+        printf("No real roots");
+        return 0
+    }
+    sqrtDisc=sqrt(disc);
+    sqrtDisc2=sqrtDisc/(2f*a);
+    mBO2A=-b/(2f*a);
+    root1=mBO2A-sqrtDisc2;
+    root2=mBO2A+sqrtDisc2;
+    printf("Root 1: %f\nRoot 2: %f\n",root1,root2);
     return 0;
 }
