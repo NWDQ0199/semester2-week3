@@ -6,7 +6,8 @@
 
 #include <stdio.h>
 
-int main( void ) {
+int main(void)
+{
 
     float testFloat = 3.14;
     float *testFloatPtr;
