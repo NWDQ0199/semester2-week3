@@ -1,0 +1,1 @@
+sizeof() returns a long int value rather than an int because the size of structs or arrays could be very large, arguably over the 2147483647 given by an int or 4294967295 by a uint
