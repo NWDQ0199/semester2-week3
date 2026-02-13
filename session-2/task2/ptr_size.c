@@ -6,9 +6,10 @@
 
 #include <stdio.h>
 
-int main( void ) {
+int main( void )
+{
 
-    int *testIntPtr;
+    int* testIntPtr;
 
     printf("Int pointer size is %ld bytes\n",sizeof(testIntPtr));
 
