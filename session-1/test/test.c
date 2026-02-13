@@ -29,5 +29,5 @@ int InsertChar(char** str, int strLen, char chr, int index)
         str2[i]=strOrig[i-1];
     }
     //free(str);
-    str=&str2;
+    *str=str2;
 }
