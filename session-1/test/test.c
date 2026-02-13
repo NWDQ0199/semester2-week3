@@ -10,24 +10,32 @@ int main(void)
 
     char* str="hello";
     InsertChar(&str, 5, '!', 5);
-    printf("str: %s",str);
+    printf("str: %s\n",str);
     free(str);
     return 0;
 }
 
 int InsertChar(char** str, int strLen, char chr, int index)
 {
-    char* str2=malloc(sizeof(char)*(strLen+1)); //strLen plus \0
+    if(index>strLen)
+    {
+        *str=malloc(0); //so str can be freed after insertchar fails
+        return 1;
+    }
+    char* str2=malloc(sizeof(char)*(strLen+2)); //strLen plus chr and null
     char* strOrig=*str;
+    //printf("str[%i]=%c\n",strLen,*str[strLen]);
     for(int i=0;i<index;i++)
     {
         str2[i]=strOrig[i];
     }
     str2[index]=chr;
-    for(int i=index+1;i<strLen;i++)
+    for(int i=index+1;i<strLen+1;i++)
     {
         str2[i]=strOrig[i-1];
     }
+    str2[strLen+2]='\0';
     //free(str);
     *str=str2;
+    return 0;
 }
